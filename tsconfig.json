@@ -4,11 +4,13 @@
     "allowJs": true,
     "incremental": true,
     "jsx": "react",
+    "lib": ["dom", "esnext"],
     "module": "esnext",
     "moduleResolution": "node",
     "noImplicitAny": false,
     "outDir": "./build",
     "sourceMap": true,
+    "strictBindCallApply": true,
     "strictNullChecks": true,
     "tsBuildInfoFile": "./.tsbuildinfo"
   },

@@ -9,19 +9,19 @@ module.exports = {
   context: __dirname,
   devtool: 'source-map',
   entry: {
-    main: buildConfig.paths.app.mainJs,
+    main: buildConfig.paths.entry,
   },
   mode: 'production',
   module: {
     rules: [
       {
-        test: /\.jsx?|\.tsx?$/,
-        include: [buildConfig.paths.app.src],
+        test: /\.tsx?$/,
+        include: [buildConfig.paths.src],
         loader: 'babel-loader',
       },
       {
-        test: /\.scss$/,
-        include: [buildConfig.paths.app.styles],
+        test: /\.css$/,
+        include: [buildConfig.paths.src],
         use: [
           MiniCssExtractPlugin.loader,
           {
@@ -32,52 +32,31 @@ module.exports = {
             },
           },
           'postcss-loader',
-          'sass-loader',
         ],
       },
-      {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[hash].[ext]',
-        },
-      },
     ],
-  },
-  optimization: {
-    runtimeChunk: {
-      name: 'manifest',
-    },
-    splitChunks: {
-      chunks: 'all',
-    },
   },
   output: {
     chunkFilename: 'js/[name].[chunkhash].js',
     filename: 'js/[name].[chunkhash].js',
-    path: `${buildConfig.paths.dist}-${process.env.DEPLOY_ENV}/${process.env.GIT_HASH}`,
-    publicPath: `${process.env.ASSETS_URL}/${process.env.GIT_HASH}/`,
+    path: buildConfig.paths.dist,
+    publicPath: '/',
   },
   plugins: [
     // This is a shorthand plugin for the DefinePlugin.
     new webpack.EnvironmentPlugin(['APP_ENV', 'NODE_ENV']),
     new HtmlWebpackPlugin({
-      favicon: buildConfig.paths.app.favicon,
+      favicon: buildConfig.paths.public.favicon,
       // "inject: true" places all JavaScript resources at the bottom of the body element.
       inject: true,
-      template: buildConfig.paths.app.html,
+      template: buildConfig.paths.public.html,
     }),
-
-    // Need this to preserve the IDs of Webpack modules between builds. Otherwise having new imports in the main bundle
-    // will cache-bust the vendor bundle.
-    new webpack.HashedModuleIdsPlugin(),
-
     new MiniCssExtractPlugin({
       filename: 'css/[name].[contenthash].css',
     }),
   ],
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
-    modules: ['node_modules', buildConfig.paths.base],
+    modules: ['node_modules', buildConfig.paths.src],
   },
 }

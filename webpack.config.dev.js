@@ -1,5 +1,3 @@
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
-  .BundleAnalyzerPlugin
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 
@@ -9,7 +7,7 @@ module.exports = {
   context: __dirname,
   devServer: {
     clientLogLevel: 'error', // The default value for this outputs too much in DevTools.
-    contentBase: buildConfig.paths.app.src,
+    contentBase: buildConfig.paths.src,
     historyApiFallback: {
       disableDotRule: true,
     },
@@ -22,41 +20,25 @@ module.exports = {
     'react-hot-loader/patch',
     `webpack-dev-server/client?http://localhost:${buildConfig.webpackDevServerPort}`,
     'webpack/hot/only-dev-server',
-    buildConfig.paths.app.mainJs,
+    buildConfig.paths.entry,
   ],
   mode: 'development',
   module: {
     rules: [
       {
-        test: /\.jsx?|\.tsx?$/,
-        include: [buildConfig.paths.app.src],
+        test: /\.tsx?$/,
+        include: [buildConfig.paths.src],
         loader: 'babel-loader',
         options: {
-          cacheDirectory: buildConfig.paths.babelCache,
+          cacheDirectory: buildConfig.caches.babel,
         },
       },
       {
         test: /\.css$/,
-        include: [buildConfig.paths.app.styles],
+        include: [buildConfig.paths.src],
         use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
-      {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[hash].[ext]',
-        },
-      },
     ],
-  },
-  optimization: {
-    moduleIds: 'named',
-    runtimeChunk: {
-      name: 'manifest',
-    },
-    splitChunks: {
-      chunks: 'all',
-    },
   },
   output: {
     chunkFilename: 'js/[name].js',
@@ -68,20 +50,18 @@ module.exports = {
     // This is a shorthand plugin for the DefinePlugin.
     new webpack.EnvironmentPlugin(['APP_ENV', 'NODE_ENV']),
     new HtmlWebpackPlugin({
-      favicon: buildConfig.paths.app.favicon,
+      favicon: buildConfig.paths.public.favicon,
       // "inject: true" places all JavaScript resources at the bottom of the body element.
       inject: true,
-      template: buildConfig.paths.app.html,
+      template: buildConfig.paths.public.html,
     }),
     new webpack.HotModuleReplacementPlugin(),
-
-    new BundleAnalyzerPlugin({ openAnalyzer: false }),
   ],
   resolve: {
     alias: {
       'react-dom': '@hot-loader/react-dom',
     },
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
-    modules: ['node_modules', buildConfig.paths.base],
+    modules: ['node_modules', buildConfig.paths.src],
   },
 }
