@@ -1581,6 +1581,100 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sentry/browser@npm:5.29.2":
+  version: 5.29.2
+  resolution: "@sentry/browser@npm:5.29.2"
+  dependencies:
+    "@sentry/core": 5.29.2
+    "@sentry/types": 5.29.2
+    "@sentry/utils": 5.29.2
+    tslib: ^1.9.3
+  checksum: 29ec3547272afc159fa932920a2f08413f6473c61a4d08a1a845e867f93e230b86615cf6b8634248de55d675d2777a8ecb8e21de9e48dd4b079c011dab423182
+  languageName: node
+  linkType: hard
+
+"@sentry/core@npm:5.29.2":
+  version: 5.29.2
+  resolution: "@sentry/core@npm:5.29.2"
+  dependencies:
+    "@sentry/hub": 5.29.2
+    "@sentry/minimal": 5.29.2
+    "@sentry/types": 5.29.2
+    "@sentry/utils": 5.29.2
+    tslib: ^1.9.3
+  checksum: dece2e4f56db55935043a35484185c5cf53bfbb05115545391352299b3bbe858a1201fe7a8ff51034eb3bcbc7bf0c86b08e2e4a1960bcd0b5a37d4cdb1041a93
+  languageName: node
+  linkType: hard
+
+"@sentry/hub@npm:5.29.2":
+  version: 5.29.2
+  resolution: "@sentry/hub@npm:5.29.2"
+  dependencies:
+    "@sentry/types": 5.29.2
+    "@sentry/utils": 5.29.2
+    tslib: ^1.9.3
+  checksum: 57ce093d8cd5996ac5b18fd12b96cf0700aa79e1d549e00d96f49de3c87eb106e1776d13963fa579a5a2b171e21cff552ebb700d36679e4809656f14c691bf54
+  languageName: node
+  linkType: hard
+
+"@sentry/minimal@npm:5.29.2":
+  version: 5.29.2
+  resolution: "@sentry/minimal@npm:5.29.2"
+  dependencies:
+    "@sentry/hub": 5.29.2
+    "@sentry/types": 5.29.2
+    tslib: ^1.9.3
+  checksum: e03545c3cc65b315f19cd85bb456e978620e8f8c62acd0a3ba6961a98f5a1a95985ab8acbabbd468d5b421c43fe80963125b30b2504199d234696214e05350c3
+  languageName: node
+  linkType: hard
+
+"@sentry/react@npm:5.29.2":
+  version: 5.29.2
+  resolution: "@sentry/react@npm:5.29.2"
+  dependencies:
+    "@sentry/browser": 5.29.2
+    "@sentry/minimal": 5.29.2
+    "@sentry/types": 5.29.2
+    "@sentry/utils": 5.29.2
+    hoist-non-react-statics: ^3.3.2
+    tslib: ^1.9.3
+  peerDependencies:
+    react: 15.x || 16.x || 17.x
+    react-dom: 15.x || 16.x || 17.x
+  checksum: a57bae30a0fde8a633509ce2866b22e29879c713c284b73baebaa71f9f369bfc96d1bc6172cc56259ac23c914199846726325d71dd23792f2dbef2058abbb0ca
+  languageName: node
+  linkType: hard
+
+"@sentry/tracing@npm:5.29.2":
+  version: 5.29.2
+  resolution: "@sentry/tracing@npm:5.29.2"
+  dependencies:
+    "@sentry/hub": 5.29.2
+    "@sentry/minimal": 5.29.2
+    "@sentry/types": 5.29.2
+    "@sentry/utils": 5.29.2
+    tslib: ^1.9.3
+  checksum: 614a9cc9eaa47777c697c2fe46e714893be3a3852911bd34d266043e9482f5a665670246418c656665925b0cf0c69f299c6c37c017e0bdc8cf04a06e438d154d
+  languageName: node
+  linkType: hard
+
+"@sentry/types@npm:5.29.2":
+  version: 5.29.2
+  resolution: "@sentry/types@npm:5.29.2"
+  checksum: 2809e15309f64f830b1dbbf66c8d4b73cf520a81172b07ea117a77bb95fdcb5c0b68d4faaee1e5cdcd3300eae3653e83579575d98f9faee6a3155c3ce0d09fb4
+  languageName: node
+  linkType: hard
+
+"@sentry/utils@npm:5.29.2":
+  version: 5.29.2
+  resolution: "@sentry/utils@npm:5.29.2"
+  dependencies:
+    "@sentry/types": 5.29.2
+    tslib: ^1.9.3
+  checksum: ab5e8c451597379f6e4def6220db8f0075c7b4a2e7ddcf23367b830799ea80326fe449f4707ab116933ec8e64127b9d173d4ee2ddc9d101d49548c01f90500f0
+  languageName: node
+  linkType: hard
+
 "@sinonjs/commons@npm:^1.7.0":
   version: 1.8.1
   resolution: "@sinonjs/commons@npm:1.8.1"
@@ -1819,6 +1913,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/lodash@npm:4.14.166":
+  version: 4.14.166
+  resolution: "@types/lodash@npm:4.14.166"
+  checksum: e8ce1ef9980f494d1da0bd3ac16ba0046b5c1097ff5c9446eb1bd167871d2e8edd2e8e8344a1dbb0134a1c12c29591cf8f950e083adb7e237d5cfeac228abb7d
+  languageName: node
+  linkType: hard
+
 "@types/minimatch@npm:*":
   version: 3.0.3
   resolution: "@types/minimatch@npm:3.0.3"
@@ -1826,7 +1927,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*":
+"@types/node@npm:*, @types/node@npm:14.14.16":
   version: 14.14.16
   resolution: "@types/node@npm:14.14.16"
   checksum: 220a7496ec73861ad7fb4ae762618bb46ac9d5d5f92f3a2fcebfd1a81a509ff558eface7bcd1d632598a8a28f856a74b324e7165918e8334a59c221cb06d15e3
@@ -1898,6 +1999,13 @@ __metadata:
     "@types/prop-types": "*"
     csstype: ^3.0.2
   checksum: dcef2034b822a949c5528fa8fa3c64da654fdbb822bd8f0488c0084d84cadb8b90af68813a6c95153d4754079f50b1cab206552c7c20f6b67a26c3641383fe31
+  languageName: node
+  linkType: hard
+
+"@types/segment-analytics@npm:0.0.33":
+  version: 0.0.33
+  resolution: "@types/segment-analytics@npm:0.0.33"
+  checksum: 503878b7da4f4f77217cbbfe8fd59d5d5d47b678695b05185e5846ff5d6a788ee661956fab910cf3cc0fca79bc3e0f326dcc600ca0fa11869c1a097522e804e2
   languageName: node
   linkType: hard
 
@@ -4142,6 +4250,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dotenv-defaults@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "dotenv-defaults@npm:2.0.1"
+  dependencies:
+    dotenv: ^8.2.0
+  checksum: 53ac7d987bb9de5d9be0f76040460f398cd56708833143f95ed48732c8d73cf55868d4b368c4eb6dbeba704263da7262623c33557c897f5c06262973477abf0d
+  languageName: node
+  linkType: hard
+
+"dotenv-webpack@npm:6.0.0":
+  version: 6.0.0
+  resolution: "dotenv-webpack@npm:6.0.0"
+  dependencies:
+    dotenv-defaults: ^2.0.1
+  peerDependencies:
+    webpack: ^1 || ^2 || ^3 || ^4 || ^5
+  checksum: e35194a34d0d35506e727831db603089da1685802bfed12a9ecdd382f6e85849a2b6aef694677db83d06f1b786d5bb6d8da3c45b35e3d5ca7fb5a0303a91ae54
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:^8.2.0":
+  version: 8.2.0
+  resolution: "dotenv@npm:8.2.0"
+  checksum: 16cb89cbd7b98b053899b8aba8c5044c8fb61a2db8a81fe70360b75035fce5fed53bd7a34d772be717d0880c0321122a4c09423f518025e1b52d96791521b1a7
+  languageName: node
+  linkType: hard
+
 "ecc-jsbn@npm:~0.1.1":
   version: 0.1.2
   resolution: "ecc-jsbn@npm:0.1.2"
@@ -5450,7 +5585,7 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"hoist-non-react-statics@npm:^3.1.0, hoist-non-react-statics@npm:^3.3.0":
+"hoist-non-react-statics@npm:^3.1.0, hoist-non-react-statics@npm:^3.3.0, hoist-non-react-statics@npm:^3.3.2":
   version: 3.3.2
   resolution: "hoist-non-react-statics@npm:3.3.2"
   dependencies:
@@ -7129,7 +7264,7 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.10, lodash@npm:^4.17.11, lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.20":
+"lodash@npm:4.17.20, lodash@npm:^4.17.10, lodash@npm:^4.17.11, lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.20":
   version: 4.17.20
   resolution: "lodash@npm:4.17.20"
   checksum: c62101d2500c383b5f174a7e9e6fe8098149ddd6e9ccfa85f36d4789446195f5c4afd3cfba433026bcaf3da271256566b04a2bf2618e5a39f6e67f8c12030cb6
@@ -8799,15 +8934,20 @@ fsevents@^2.1.2:
     "@babel/preset-typescript": 7.12.7
     "@babel/types": 7.12.12
     "@hot-loader/react-dom": 17.0.1
+    "@sentry/react": 5.29.2
+    "@sentry/tracing": 5.29.2
     "@testing-library/dom": 7.29.0
     "@testing-library/jest-dom": 5.11.6
     "@testing-library/react": 11.2.2
     "@testing-library/user-event": 12.6.0
     "@types/classnames": 2.2.11
     "@types/jest": 26.0.19
+    "@types/lodash": 4.14.166
+    "@types/node": 14.14.16
     "@types/react": 17.0.0
     "@types/react-dom": 17.0.0
     "@types/react-router-dom": 5.1.6
+    "@types/segment-analytics": 0.0.33
     "@types/testing-library__jest-dom": 5.9.5
     "@typescript-eslint/eslint-plugin": 4.11.0
     "@typescript-eslint/parser": 4.11.0
@@ -8818,6 +8958,7 @@ fsevents@^2.1.2:
     classnames: 2.2.6
     core-js: 3.8.1
     css-loader: 5.0.1
+    dotenv-webpack: 6.0.0
     eslint: 7.16.0
     eslint-plugin-jest-dom: 3.6.4
     eslint-plugin-react: 7.21.5
@@ -8827,6 +8968,7 @@ fsevents@^2.1.2:
     husky: 4.3.6
     jest: 26.6.3
     lint-staged: 10.5.3
+    lodash: 4.17.20
     mini-css-extract-plugin: 1.3.3
     postcss: 8.2.1
     postcss-loader: 4.1.0
@@ -10461,7 +10603,7 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.8.1, tslib@npm:^1.9.0":
+"tslib@npm:^1.8.1, tslib@npm:^1.9.0, tslib@npm:^1.9.3":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: f44fe7f216946b17d3e3074df3746372703cf24e9127b4c045511456e8e4bf25515fb0a1bb3937676cc305651c5d4fcb6377b0588a4c6a957e748c4c28905d17

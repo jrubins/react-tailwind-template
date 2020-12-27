@@ -10,7 +10,6 @@ dist
 
 # Computer specific files
 .DS_Store
-.env
 .idea
 
 # Dependencies

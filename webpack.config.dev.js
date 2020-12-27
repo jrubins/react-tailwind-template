@@ -1,3 +1,4 @@
+const Dotenv = require('dotenv-webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 
@@ -47,14 +48,15 @@ module.exports = {
     publicPath: '/',
   },
   plugins: [
-    // This is a shorthand plugin for the DefinePlugin.
-    new webpack.EnvironmentPlugin(['APP_ENV', 'NODE_ENV']),
+    new Dotenv(),
+
     new HtmlWebpackPlugin({
       favicon: buildConfig.paths.public.favicon,
       // "inject: true" places all JavaScript resources at the bottom of the body element.
       inject: true,
       template: buildConfig.paths.public.html,
     }),
+
     new webpack.HotModuleReplacementPlugin(),
   ],
   resolve: {

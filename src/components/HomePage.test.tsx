@@ -1,10 +1,10 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 
-import App from './App'
+import HomePage from './HomePage'
 
 test('the application loads', () => {
-  render(<App />)
+  render(<HomePage />)
 
   expect(screen.getByText('Hello World')).toBeInTheDocument()
 })
